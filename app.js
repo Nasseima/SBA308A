@@ -2,7 +2,6 @@ const url = 'https://dogapi.dog/api/v2/breeds'
 
 const p = document.createElement('p')
 const Img = document.getElementsByClassName("firstImg")
-
 const ctn = document.querySelector("#main")
 let newItem = "";
 
@@ -10,10 +9,10 @@ async function logSomething() {
     try {
     
         const imageUrls = [
-            '../Dog_Images/shepDog.jpg',
-            '../Dog_Images/bouvierDo.jpg',
+            'https://images.pexels.com/photos/18136224/pexels-photo-18136224/free-photo-of-sitting-caucasian-shepherd-dog.jpeg?auto=compress&cs=tinysrgb&w=300',
+            'https://images.pexels.com/photos/20783872/pexels-photo-20783872/free-photo-of-a-black-dog-walking-on-grass-in-a-park.jpeg?auto=compress&cs=tinysrgb&w=300',
             '../Dog_Images/GrandBassetDog.jpg',
-            '../Dog_Images/Hokkaido.jpg',
+            '../Dog_Images/Hokkaido.jpg', 
             '../Dog_Images/JapaneseTerrier.jpg',
             '../Dog_Images/Hanoverian Scenthound.jpg',
             '../Dog_Images/TibetanSpaniel.jpg',
@@ -35,8 +34,8 @@ async function logSomething() {
     const imageUrl = imageUrls[i % imageUrls.length];
 
     newItem += `
-    <div style="background-color: white; width:100vh; height:100vh">
-    <img src="${imageUrl}" alt="Dog ${i + 1}" style="max-width: 100%; max-height: 100%;">
+    <div style="background-color: white; width:100%; height:100vh">
+    <img src="${imageUrl}" alt="Dog ${i + 1}" style="width: 550px; height: 530px;">
     <h1>${dogData.data[i].attributes.name}</h1>
     <p>${dogData.data[i].attributes.description} </p>
     <div style="display:flex; ">
