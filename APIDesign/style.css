@@ -53,12 +53,11 @@ body{
 
 img{
     width: 95%;
-    height: 360px;
+    height: 300px;
 }
 .cardmy-4{
     background-color: white;
-    width: 40%;
-    height: 330%;
+    width: 29%;
     border-radius: 20px;
     box-shadow: 5px 10px 4px greenyellow ;
     

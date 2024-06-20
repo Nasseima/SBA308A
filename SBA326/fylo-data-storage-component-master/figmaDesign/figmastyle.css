@@ -1,6 +1,160 @@
-body{
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
+
+:root {
+  --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+main {
+  min-height: 100vh;
+  background: url("./images/bg-desktop.png") no-repeat top 50vh left 0vw,
+    var(--Very-Dark-Blue);
+  background-size: cover;
+}
+
+.wrapper .symbol,
+.wrapper .stat {
+  background: var(--Dark-Blue);
+}
+.wrapper .symbol {
+  height: 12rem;
+  border-radius: 1rem 10vh 1rem 1rem;
+  padding: 2rem;
+}
+
+.symbol .icns .icn-border {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background: var(--Very-Dark-Blue);
+}
+
+.wrapper .rltv {
+  position: relative;
+}
+
+.wrapper .stat {
+  height: 8rem;
+  border-radius: 1rem;
+}
+
+.stat .pale {
+  color: var(--Pale-Blue);
+}
+.stat p {
+  margin: 0;
+}
+
+.wrapper .white {
+  position: absolute;
+  background: white;
+  top: 15%;
+  right: 17%;
+  width: 8rem;
+  height: 3.3rem;
+  padding-inline: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0;
+  color: var(--Grayish-Blue);
+  font-size: 10px;
+  font-weight: 700;
+}
+.wrapper .white p {
+  margin: 0;
+}
+.wrapper p span {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue) !important;
+}
+
+.wrapper .triangle {
+  position: absolute;
+  background: transparent;
+  border: 1.3rem solid transparent;
+  border-right-color: white;
+  right: 17%;
+  top: 30%;
+}
+
+.stat .scale {
+  width: 100%;
+  background: var(--Very-Dark-Blue);
+  border-radius: 1rem;
+}
+.stat .scale .grad {
+  border-radius: 1rem;
+  width: 75%;
+  height: 1.2rem;
+  background: var(--Gradient);
+}
+
+.stat .scale .grad .circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100vh;
+  background: var(--Pale-Blue);
+}
+
+@media (max-width: 1600px) {
+    .wrapper .white {
+      top: 15%;
+      right: 25%;
+    }
+  
+    .wrapper .triangle {
+      right: 25%;
+      top: 30%;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .wrapper .white {
+      top: 15%;
+      right: 17%;
+    }
+  
+    .wrapper .triangle {
+      right: 17%;
+      top: 30%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .wrapper .white {
+      top: 15%;
+      right: 10%;
+    }
+  
+    .wrapper .triangle {
+      right: 10%;
+      top: 30%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    main {
+      background: url("./images/bg-mobile.png") no-repeat center;
+      background-size: cover;
+    }
+  
+    .wrapper .white {
+      top: 95%;
+      /* left: 35%; */
+      right: 35%;
+      border-radius: 0.5rem;
+    }
+  
+    .wrapper .triangle {
+      display: none;
+    }
+  }
